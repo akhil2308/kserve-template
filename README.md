@@ -21,10 +21,11 @@ curl --location 'http://localhost:8019/v1/models/Meta-Llama-3.2-1B-Instruct:pred
 
 
 ## Deploy
-docker build  -t meta-llama-3.2-1b-instruct .
-docker run -ePORT=8080 -p8080:8080 docker.io/library/meta-llama-3.2-1b-instruct
+- docker build  -t meta-llama-3.2-1b-instruct .
 
-kubectl apply -f kserve_inference_service.yaml
+- docker run -ePORT=8080 -p8080:8080 docker.io/library/meta-llama-3.2-1b-instruct
+
+- kubectl apply -f kserve_inference_service.yaml
 
 
 https://kserve.github.io/website/master/modelserving/v1beta1/custom/custom_model/
