@@ -1,0 +1,10 @@
+curl --location 'http://localhost:8019/v1/models/Meta-Llama-3.2-1B-Instruct:predict' \
+--header 'Content-Type: application/json' \
+--data '{
+    "messages" : [
+        {"role": "user", "content": "Hi there!"},
+        {"role": "assistant", "content": "Nice to meet you!"},
+        {"role": "user", "content": "Can I ask a question?"}
+    ],
+    "max_tokens": 256
+}'
